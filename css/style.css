@@ -1,0 +1,422 @@
+/* =========== CSS Variables =========== */
+:root {
+    --bg-primary: #f4f6f8;
+    --bg-secondary: white;
+    --text-primary: #333;
+    --color-primary: #0066cc;
+    --color-accent: #eaf3fc;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Dark theme variables */
+body.dark-theme {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --color-primary: #66b3ff;
+    --color-accent: #3a3a3a;
+}
+
+
+/* ============ Reset & Base ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 2rem;   
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* ============ Header ============ */
+header {
+    text-align: center;
+    position: relative;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem 0;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
+/* ============ Navigation ============ */
+nav {
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem 0 1.5rem 0;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.header-navigation {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-primary);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+/* ============ Main Layout ============ */
+main {
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    scroll-margin-top: 137.28px; /* Adjust for sticky header */
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+
+/* Dark Mode Button */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Dark theme header */
+body.dark-theme header {
+    background-color: var(--bg-secondary);
+}
+
+
+/* ============ About Section ============ */
+#about {
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 5px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.class-journey-features {
+    display: flex;
+    flex-wrap: wrap; /* This makes it so you can have them all side by side. In that 4-in-a-row type pattern */
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+.class-journey-feature {
+    background: rgba(0, 20, 40, 0.6);
+    border: 1px solid rgba(0, 186, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 186, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.class-journey-feature:hover {
+    transform: translateY(-5px); /* this just moves it up. A cool little transition. And it's also smoothed out over the course of 0.3s, from the parent tag above */
+    box-shadow: 0 0 20px rgba(0, 186, 255, 0.3);
+}
+
+.class-journey-feature h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00baff;
+}
+
+
+/* ============ Interests Aside ============ */
+aside.interests {
+    background-color: var(--color-accent);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+aside.interests ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside.interests li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* font-size: 4px; */
+}
+
+aside.interests h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+
+/* ============ Details Dropdown ============ */
+details {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-accent);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ============ Skills Section ============ */
+#skills {
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 5px;
+}
+
+.skills-text p {
+    margin-bottom: 1rem;
+}
+
+
+/* ============ Skills Aside ============ */
+aside.skills-list {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+aside.skills-list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+aside.skills-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* ============ Instruments Aside ============ */
+aside.instruments-list {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+aside.instruments-list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+aside.instruments-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+/* ============ Projects Section ============ */
+#projects {
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #0066cc;
+    border-radius: 5px;
+}
+
+.projects-text p {
+    margin-bottom: 1rem;
+}
+
+
+/* ============ Projects Aside ============ */
+aside.projects {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid #004a99;
+    border-radius: 4px;
+}
+
+aside.projects ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+aside.projects li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+
+/* ============ Contact Me Section ============ */
+#contact {
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #0066cc;
+    border-radius: 5px;
+}
+
+.contact-text p {
+    margin-bottom: 1rem;
+}
+
+/* ============ Contact Aside ============ */
+aside.contact {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid #004a99;
+    border-radius: 4px;
+}
+
+aside.contact ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+aside.contact li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+
+/* ============ Response Design ============ */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .theme-toggle {
+        position: static;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ========== Print Styles ========== */
+@media print {
+    .theme-toggle {
+        display: none;
+    }
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+
+/* ============ Headings ============ */
+h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+
+/* =============================================================================
+   End of Portfolio/style.css
+   ========================================================================= */
