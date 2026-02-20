@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio for computer science projects"
+      content="Portfolio for Ryan Johnson — AI Engineering Student at Neumont University"
     />
     <meta
       name="keywords"
-      content="Neumont, web dev, web development, student, portfolio, HTML5, CSS3, AI, AI Projects"
+      content="Neumont, web dev, web development, student, portfolio, HTML5, CSS3, AI, Reinforcement Learning, ARPG"
     />
     <meta name="author" content="Ryan Johnson" />
 
-    <!-- The OG here means Open Graph, which tags control for social media channels. -->
-    <meta property="og:title" content="Ryan's Portfolio" />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Ryan Johnson — AI Engineering Portfolio"
+    />
     <meta
       property="og:description"
-      content="This is my personal portfolio to showcase my web dev projects, AI projects, and any other computer science projects."
+      content="Portfolio showcasing AI projects, web development, and technical skills of Ryan Johnson, AI Engineering student at Neumont University."
     />
     <meta property="og:type" content="website" />
 
     <title>Ryan's Portfolio</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <!-- Devicons CDN for technology logos -->
     <link
-      rel="icon"
-      type="image/jpeg"
-      href="c:/College-Portfolio/images/image.png"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Script to set theme upon load, mitigating FOUC. -->
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme !== "light") {
+        document.documentElement.classList.add("dark-theme");
+      }
+    </script>
   </head>
   <body>
     <!-- HTML5 Semantic Header -->
@@ -38,6 +49,7 @@
         <p class="tagline">Artificial Intelligence Engineering Student</p>
       </div>
     </header>
+
     <!-- HTML5 Semantic Navigation -->
     <nav
       class="header-navigation"
@@ -47,36 +59,112 @@
       <div class="container">
         <ul>
           <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">My Skills</a></li>
-          <li><a href="#projects">Amazing Projects</a></li>
-          <li><a href="#contact">Contact Me!</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#sources">Sources</a></li>
         </ul>
       </div>
     </nav>
+
     <!-- HTML5 Main Content -->
     <main id="main-content" role="main">
       <div class="container">
-        <!-- About Section with HTML5 semantic elements -->
+        <!-- ===================== ABOUT ===================== -->
         <section id="about" aria-labelledby="about-heading">
           <h2 id="about-heading">About Me</h2>
+          <div class="about-bio">
+            <p>
+              I am Ryan Johnson, a second-year AI Engineering student at Neumont
+              University with a passion for incredibly intelligent systems that
+              have unexpected behaviors and go beyond scripted behavior. What
+              excites me about Artificial Intelligence Engineering is reward
+              curves, instant feedback, training loops, and the unexpected
+              behaviors. My work in AI Engineering focuses on Cybersecurity,
+              Game AI-NPC Dev, Reinforcement Learning, and Robotics.
+            </p>
+          </div>
+
           <div class="about-content">
             <div class="about-text">
               <details>
-                <summary>College Journey</summary>
+                <summary>College Journey — Coursework by Theme</summary>
                 <div class="class-journey-features">
                   <div class="class-journey-feature">
-                    <h2>Hi</h2>
+                    <h3>🤖 AI &amp; Machine Learning</h3>
+                    <ul>
+                      <li>AIE101 — Foundations of Artificial Intelligence</li>
+                      <li>CSC145 — Prompt Engineering</li>
+                    </ul>
+                  </div>
+
+                  <div class="class-journey-feature">
+                    <h3>💻 Programming &amp; CS</h3>
+                    <ul>
+                      <li>CSC105 — Using Modern Operating Systems</li>
+                      <li>CSC110 — Introduction to Computer Science</li>
+                      <li>CSC125 — Logical and Computational Thinking</li>
+                      <li>CSC150 — Object Oriented Programming and Design</li>
+                      <li>CSC181 — Scripting and Automation</li>
+                    </ul>
+                  </div>
+
+                  <div class="class-journey-feature">
+                    <h3>🌐 Web Development</h3>
+                    <ul>
+                      <li>
+                        CSC210 — Intro to Web Presentation &amp; Development
+                      </li>
+                      <li>MTM282 — Interactive Web Development</li>
+                    </ul>
+                  </div>
+
+                  <div class="class-journey-feature">
+                    <h3>🗄️ Data &amp; Databases</h3>
+                    <ul>
+                      <li>DAT205 — Introduction to Data Science</li>
+                      <li>DBT130 — Databases I</li>
+                      <li>DBT230 — Databases II</li>
+                      <li>ITH215 — Networking I</li>
+                    </ul>
+                  </div>
+
+                  <div class="class-journey-feature">
+                    <h3>📐 Mathematics</h3>
+                    <ul>
+                      <li>MAT101 — Mathematics for Computer Science</li>
+                      <li>MAT105 — College Algebra</li>
+                      <li>MAT150 — Trigonometry</li>
+                      <li>MAT210 — Linear Algebra</li>
+                      <li>MAT260 — Statistics</li>
+                    </ul>
+                  </div>
+
+                  <div class="class-journey-feature">
+                    <h3>🎓 Professional &amp; General</h3>
+                    <ul>
+                      <li>BUS101 — Personal Finance</li>
+                      <li>ENG110 — Introduction to English Composition</li>
+                      <li>FAC120 — Spoken Communications</li>
+                      <li>MGT101 — Introduction to Project Management</li>
+                      <li>MTM140 — Basics of Film</li>
+                      <li>NEU100 — College Success Strategies</li>
+                      <li>PRO100 — Introductory Software Projects</li>
+                      <li>PRO335 — Persistence Project</li>
+                      <li>SSC101 — Educational Learning Theories</li>
+                    </ul>
                   </div>
                 </div>
               </details>
             </div>
-            <aside class="interests" aria-labelledby="interests-heading">
-              <h3 id="interests-heading">Class Interests</h3>
+
+            <div class="interests" aria-labelledby="interests-heading">
+              <h3 id="interests-heading">Personal Interests</h3>
               <ul>
                 <li>
                   <span role="img" aria-label="Gaming">🎮</span>
-                  Gaming (Marvel Rivals, The Isle, Windblown, Skyrim, and so
-                  many more)
+                  Gaming (Marvel Rivals, Windblown, Skyrim, and so many more)
                 </li>
                 <li>
                   <span role="img" aria-label="Programming">💻</span>
@@ -90,88 +178,352 @@
                 </li>
                 <li>
                   <span role="img" aria-label="Learning">📚</span>
-                  Learning new technology and state of the art tricks.
+                  Learning new technology and state of the art techniques.
                 </li>
               </ul>
-            </aside>
+            </div>
           </div>
         </section>
-      </div>
-      <div class="container">
-        <!-- Skills Section with HTML5 semantic elements -->
+
+        <!-- ===================== SKILLS ===================== -->
         <section id="skills" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">My Skills!</h2>
-          <div class="skills-content">
-            <div class="skills-text">
-              <p>The <strong>skills</strong> I have learned in my life are:</p>
-              <aside class="skills-list">
-                <h1>Programming</h2>
-                <ul>
-                  <li><strong> HTML5 </strong></li>
-                  <li><strong>CSS3</strong></li>
-                  <li><strong>JavaScript</strong></li>
-                  <li><strong>Python</strong></li>
-                  <li><strong>Java</strong></li>
-                  <li><strong>C++</strong></li>
-                  <li><strong>SQL</strong></li>
-                  <li><strong>Lua</strong></li>
-                </ul>
-                <h1>Content Creation</h2>
-                <ul>
-                  <li><strong>Video Editing</strong></li>
-                  <li>
-                    <strong>Instruments</strong>
-                    <aside class="instruments-list">
-                      <ul>
-                        <li>Acoustic Guitar</li>
-                        <li>Electric Guitar</li>
-                        <li>Alto Saxophone</li>
-                        <li>Piano</li>
-                      </ul>
-                    </aside>
-                  </li>
-                </ul>
-                <h1>Managerial Skills</h2>
-                <ul>
-                  <li><strong>Time management</strong></li>
-                  <li><strong>Conflict De-escalation</strong></li>
-                  <li><strong>Leadership</strong></li>
-                </ul>
-              </aside>
+          <h2 id="skills-heading">My Skills</h2>
+          <p class="section-intro">
+            Built through coursework, personal projects, and self-study.
+          </p>
+          <div class="skills-grid">
+            <!-- Programming — with icons and proficiency bars -->
+            <div class="skill-category">
+              <h3>Programming</h3>
+              <ul class="lang-list">
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-html5-plain colored"></i
+                    ><span>HTML5</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 80%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 70%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-javascript-plain colored"></i
+                    ><span>JavaScript</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 50%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Python</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 60%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-java-plain colored"></i><span>Java</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 30%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-cplusplus-plain colored"></i
+                    ><span>C++</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 15%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-mysql-plain colored"></i><span>SQL</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 20%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-lua-plain colored"></i><span>Lua</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-bar-fill" style="--w: 10%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Content Creation -->
+            <div class="skill-category">
+              <h3>Content Creation</h3>
+              <ul>
+                <li>Video Editing</li>
+                <li>
+                  Instruments
+                  <ul class="instrument-sub-list">
+                    <li>Acoustic Guitar</li>
+                    <li>Electric Guitar</li>
+                    <li>Alto Saxophone</li>
+                    <li>Piano</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Managerial Skills -->
+            <div class="skill-category">
+              <h3>Managerial Skills</h3>
+              <ul>
+                <li>Time Management</li>
+                <li>Conflict De-escalation</li>
+                <li>Leadership</li>
+              </ul>
             </div>
           </div>
         </section>
-      </div>
-      <div class="container">
-        <!-- Projects Section with HTML5 semantic elements -->
+
+        <!-- ===================== PROJECTS ===================== -->
         <section id="projects" aria-labelledby="projects-heading">
-          <h2 id="projects-heading">Amazing Projects!</h2>
-          <div class="projects-content">
-            <div class="projects-text">
-              <p>
-                There aren't any <em>public</em> projects I have to show you,
-                but currently I am working on a DQN Skyrim
-                Helgen-Tutorial-Sequence beating AI
+          <h2 id="projects-heading">Projects</h2>
+          <p class="section-intro">
+            A mix of personal AI research, game development, and automation
+            work.
+          </p>
+          <div class="projects-grid">
+            <!-- Ironmind -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Ironmind</h3>
+                <span class="project-status in-progress">In Progress</span>
+              </div>
+              <img
+                src="images/ironmind_reward_curve.png"
+                alt="Ironmind DQN training reward curve"
+                class="project-img"
+              />
+              <p class="project-desc">
+                A personal AI research project building a game-agnostic
+                reinforcement learning agent capable of autonomously playing and
+                mastering Action RPGs. The agent uses a modular architecture: a
+                <strong>Perception Module</strong> to interpret screen state, a
+                <strong>Decision Module</strong> (neural network) for real-time
+                combat decisions, and an
+                <strong>Action Interface Layer</strong> to inject keyboard and
+                mouse inputs — zero hardcoded behavior trees or scripted
+                actions.
               </p>
-              <aside class="projects" aria-labelledby="projects-list">
-                <h2 id="projects-list">Projects List</h2>
-                <ul>
-                  <li>Coming Soon!</li>
-                </ul>
-              </aside>
+              <p class="project-desc">
+                <strong>Goal:</strong> ≥95% success rate over 1,000 simulated
+                engagements. Primary test environment:
+                <em>The Elder Scrolls V: Skyrim</em>
+                (Helgen tutorial sequence via Deep Q-Network).
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag"
+                  ><i class="devicon-python-plain"></i> Python</span
+                >
+                <span class="tech-tag">Reinforcement Learning</span>
+                <span class="tech-tag">Deep Q-Network</span>
+                <span class="tech-tag">Computer Vision</span>
+              </div>
+            </div>
+
+            <!-- Roblox ARPG -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  Roblox ARPG <span class="project-subtitle">(Untitled)</span>
+                </h3>
+                <span class="project-status in-development"
+                  >In Development</span
+                >
+              </div>
+              <div class="project-img-placeholder">
+                <!-- FILL IN: Add a world screenshot or boss encounter screenshot. -->
+                <span>[ Add: World / Boss Encounter Screenshot ]</span>
+              </div>
+              <p class="project-desc">
+                A souls-like Action RPG built in Roblox Studio featuring an open
+                world with exploration, quests, and dialogue systems. The core
+                differentiator: bosses are powered by AI models that
+                <strong>observe and adapt to each player's combat style</strong
+                >, countering strategies over successive encounters. No two
+                players face the same fight.
+              </p>
+              <p class="project-desc">
+                Emphasizes emergent challenge — the AI evolves its tactics based
+                on real encounter data, making boss fights genuinely dynamic and
+                replayable.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag"
+                  ><i class="devicon-lua-plain"></i> Lua / Luau</span
+                >
+                <span class="tech-tag">Roblox Studio</span>
+                <span class="tech-tag">Adaptive AI</span>
+                <span class="tech-tag">ARPG Systems</span>
+              </div>
+            </div>
+
+            <!-- Eve Echoes OCR Bot -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Eve Echoes OCR Bot</h3>
+                <span class="project-status archived">Archived</span>
+              </div>
+              <div class="project-img-placeholder">
+                <span
+                  >[ No output to show. Was archived with no documentation or
+                  visualization. ]</span
+                >
+              </div>
+              <p class="project-desc">
+                A Discord bot built for the mobile MMO <em>Eve Echoes</em> that
+                processed in-game screenshots via OCR (Optical Character
+                Recognition), extracting text from the game UI and converting
+                in-game timestamps into Unix format for Discord's native dynamic
+                time display (<code>/t:&lt;unix&gt;:F</code>) — handling
+                timezone differences automatically for fleet coordination.
+              </p>
+              <p class="project-desc">
+                Archived after the game's UI layout became inconsistent with the
+                OCR pipeline. A solid exercise in image processing, automation,
+                and Discord API integration.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag"
+                  ><i class="devicon-python-plain"></i> Python</span
+                >
+                <span class="tech-tag">discord.py</span>
+                <span class="tech-tag">OCR / Tesseract</span>
+                <span class="tech-tag">Image Processing</span>
+              </div>
             </div>
           </div>
         </section>
-      </div>
-      <div class="container">
-        <!-- Contact Section with HTML5 semantic elements -->
+
+        <!-- ===================== EDUCATION ===================== -->
+        <section id="education" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+
+          <div class="edu-header">
+            <p>
+              <strong>Neumont University</strong> — Bachelor of Science in
+              Artificial Intelligence Engineering
+            </p>
+            <p class="edu-meta">
+              Cumulative GPA: <strong>3.91</strong> &nbsp;|&nbsp; Credits
+              Earned: <strong>80 / 180</strong>
+            </p>
+          </div>
+
+          <!-- Timeline: newest at top, desc order -->
+          <div class="timeline">
+            <div class="timeline-entry">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-quarter">Winter 2026 — Current</h3>
+                <ul>
+                  <li>MTM140 — Basics of Film</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-quarter">Fall 2025</h3>
+                <ul>
+                  <li>DBT230 — Databases II</li>
+                  <li>MAT150 — Trigonometry</li>
+                  <li>MAT210 — Linear Algebra</li>
+                  <li>MTM282 — Interactive Web Development</li>
+                  <li>PRO335 — Persistence Project</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-quarter">Summer 2025</h3>
+                <ul>
+                  <li>CSC125 — Logical and Computational Thinking</li>
+                  <li>CSC210 — Intro to Web Presentation &amp; Development</li>
+                  <li>DAT205 — Introduction to Data Science</li>
+                  <li>ENG110 — Introduction to English Composition</li>
+                  <li>MAT260 — Statistics</li>
+                  <li>PRO100 — Introductory Software Projects</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-quarter">Spring 2025</h3>
+                <ul>
+                  <li>BUS101 — Personal Finance</li>
+                  <li>CSC181 — Scripting and Automation</li>
+                  <li>DBT130 — Databases I</li>
+                  <li>FAC120 — Spoken Communications</li>
+                  <li>MAT105 — College Algebra</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-quarter">Winter 2025</h3>
+                <ul>
+                  <li>CSC150 — Object Oriented Programming and Design</li>
+                  <li>ITH215 — Networking I</li>
+                  <li>MAT101 — Mathematics for Computer Science</li>
+                  <li>MGT101 — Introduction to Project Management</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3 class="timeline-quarter">Fall 2024 — Start</h3>
+                <ul>
+                  <li>AIE101 — Foundations of Artificial Intelligence</li>
+                  <li>CSC105 — Using Modern Operating Systems</li>
+                  <li>CSC110 — Introduction to Computer Science</li>
+                  <li>CSC145 — Prompt Engineering</li>
+                  <li>NEU100 — College Success Strategies</li>
+                  <li>SSC101 — Educational Learning Theories</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
         <section id="contact" aria-labelledby="contact-heading">
           <h2 id="contact-heading">Contact Me</h2>
           <div class="contact-content">
             <div class="contact-text">
               <p>
                 If you would like to get in touch with me, use one of these
-                methods below. Ordered in descending order by priority
+                methods below. Ordered in descending order by priority:
               </p>
               <ul>
                 <li>Discord @ expl0deb0ss</li>
@@ -183,8 +535,141 @@
             </div>
           </div>
         </section>
+
+        <!-- ===================== SOURCES ===================== -->
+        <section id="sources" aria-labelledby="sources-heading">
+          <h2 id="sources-heading">Sources &amp; References</h2>
+          <p class="section-intro">
+            Documentation and references for the technologies, tools, and
+            concepts represented in this portfolio and its projects.
+          </p>
+          <ol class="sources-list">
+            <li>
+              MDN Web Docs contributors. (2024).
+              <em>HTML: HyperText Markup Language</em>. Mozilla.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                rel="noopener"
+              >
+                https://developer.mozilla.org/en-US/docs/Web/HTML
+              </a>
+            </li>
+            <li>
+              MDN Web Docs contributors. (2024).
+              <em>CSS: Cascading Style Sheets</em>. Mozilla.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                rel="noopener"
+              >
+                https://developer.mozilla.org/en-US/docs/Web/CSS
+              </a>
+            </li>
+            <li>
+              MDN Web Docs contributors. (2024). <em>JavaScript</em>. Mozilla.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                rel="noopener"
+              >
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript
+              </a>
+            </li>
+            <li>
+              Python Software Foundation. (2024).
+              <em>Python 3 documentation</em>.
+              <a
+                href="https://docs.python.org/3/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://docs.python.org/3/
+              </a>
+            </li>
+            <li>
+              Oracle Corporation. (2024). <em>Java SE documentation</em>.
+              <a
+                href="https://docs.oracle.com/en/java/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://docs.oracle.com/en/java/
+              </a>
+            </li>
+            <li>
+              cppreference.com contributors. (2024). <em>C++ reference</em>.
+              <a
+                href="https://en.cppreference.com/w/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://en.cppreference.com/w/
+              </a>
+            </li>
+            <li>
+              W3Schools. (2024). <em>SQL tutorial</em>.
+              <a
+                href="https://www.w3schools.com/sql/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://www.w3schools.com/sql/
+              </a>
+            </li>
+            <li>
+              Lua.org. (2024). <em>Lua 5.4 reference manual</em>.
+              <a
+                href="https://www.lua.org/manual/5.4/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://www.lua.org/manual/5.4/
+              </a>
+            </li>
+            <li>
+              Roblox Corporation. (2024). <em>Luau documentation</em>. Roblox.
+              <a href="https://luau.org/" target="_blank" rel="noopener">
+                https://luau.org/
+              </a>
+            </li>
+            <li>
+              Rapptz. (2024). <em>discord.py documentation</em>.
+              <a
+                href="https://discordpy.readthedocs.io/en/stable/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://discordpy.readthedocs.io/en/stable/
+              </a>
+            </li>
+            <li>
+              Simonini, T. (2022). <em>Deep reinforcement learning course</em>.
+              Hugging Face.
+              <a
+                href="https://huggingface.co/learn/deep-rl-course/unit0/introduction"
+                target="_blank"
+                rel="noopener"
+              >
+                https://huggingface.co/learn/deep-rl-course/unit0/introduction
+              </a>
+            </li>
+            <li>
+              Tesseract OCR contributors. (2024).
+              <em>Tesseract documentation</em>.
+              <a
+                href="https://tesseract-ocr.github.io/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://tesseract-ocr.github.io/
+              </a>
+            </li>
+          </ol>
+        </section>
       </div>
     </main>
+
     <!-- JavaScript -->
     <script src="js/portfolio.js"></script>
   </body>
